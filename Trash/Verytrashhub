@@ -1,4 +1,4 @@
-while true do
+while wait() do
 local args = {
     [1] = false,
     [2] = Vector3.new(005.7822265625, -6643.07421875, 5800.71435546875),
