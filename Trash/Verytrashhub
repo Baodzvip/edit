@@ -1,10 +1,1 @@
-while wait() do
-local args = {
-    [1] = false,
-    [2] = Vector3.new(005.7822265625, -6643.07421875, 5800.71435546875),
-    [3] = CFrame.new(005.7822265625, -6643.07421875, 5800.71435546875, -0.6420178413391113, -0.5323116779327393, 0.5517767071723938, 1.4901161193847656e-08, 0.7196871042251587, 0.6942986845970154, -0.7666897773742676, 0.4457521438598633, -0.4620519280433655),
-    [4] = 1
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvents"):WaitForChild("ThePressOfDeathRemote"):FireServer(unpack(args))
-end
+hi
