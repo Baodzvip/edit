@@ -3,7 +3,7 @@ local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/B
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/Baodzvip/edit/main/Scripts/Main/InterfaceManager.lua"))()
 
 local Window = Fluent:CreateWindow({
-    Title = "Fluent " ,
+    Title = "Crime Hub " ,
     SubTitle = "by baodzvip",
     TabWidth = 150,
     Size = UDim2.fromOffset(500, 350),
