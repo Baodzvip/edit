@@ -202,5 +202,5 @@ end
 Main:Notify({
     Title = "Crime Hub",
     Content = "The script has been loaded.",
-    Duration = 5
+    Duration = 7
 })
