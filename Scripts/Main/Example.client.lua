@@ -1,7 +1,7 @@
 local Main = require(game:GetService("ReplicatedStorage"):WaitForChild("Fluent"))
 
 local Window = Main:CreateWindow({
-    Title = "Crime Hub " ,
+    Title = "Lemon Hub " ,
     SubTitle = "by baodzvip",
     TabWidth = 150,
     Size = UDim2.fromOffset(500, 350),
@@ -200,7 +200,7 @@ do
 end
 
 Main:Notify({
-    Title = "Crime Hub",
+    Title = "Lemon Hub",
     Content = "The script has been loaded.",
     Duration = 7
 })
