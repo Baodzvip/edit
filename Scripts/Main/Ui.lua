@@ -3,7 +3,7 @@ local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/B
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/Baodzvip/edit/main/Scripts/Main/InterfaceManager.lua"))()
 
 local Window = Fluent:CreateWindow({
-    Title = "Crime Hub " ,
+    Title = "Lemon Hub " ,
     SubTitle = "by baodzvip",
     TabWidth = 150,
     Size = UDim2.fromOffset(500, 350),
@@ -23,7 +23,7 @@ local Options = Fluent.Options
 do
     Fluent:Notify({
         Title = "Notification",
-        Content = "Crime Hub",
+        Content = "Lemon Hub",
         SubContent = "By baodzvip", -- Optional
         Duration = 5 -- Set to nil to make the notification not disappear
     })
@@ -250,7 +250,7 @@ SaveManager:BuildConfigSection(Tabs.Settings)
 Window:SelectTab(1)
 
 Fluent:Notify({
-    Title = "Crime Hub",
+    Title = "Lemon Hub",
     Content = "The script has been loaded.",
     Duration = 7
 })
