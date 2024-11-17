@@ -23,8 +23,8 @@ local Options = Fluent.Options
 do
     Fluent:Notify({
         Title = "Notification",
-        Content = "This is a notification",
-        SubContent = "SubContent", -- Optional
+        Content = "Crime Hub",
+        SubContent = "By baodzvip", -- Optional
         Duration = 5 -- Set to nil to make the notification not disappear
     })
 
@@ -252,7 +252,7 @@ Window:SelectTab(1)
 Fluent:Notify({
     Title = "Crime Hub",
     Content = "The script has been loaded.",
-    Duration = 5
+    Duration = 7
 })
 
 -- You can use the SaveManager:LoadAutoloadConfig() to load a config
