@@ -3,9 +3,9 @@ local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/B
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/Baodzvip/edit/main/Scripts/Main/InterfaceManager.lua"))()
 
 local Window = Fluent:CreateWindow({
-    Title = "Fluent " .. Fluent.Version,
+    Title = "Fluent "  Fluent.Version,
     SubTitle = "by baodzvip",
-    TabWidth = 140,
+    TabWidth = 150,
     Size = UDim2.fromOffset(500, 350),
     Acrylic = true, -- The blur may be detectable, setting this to false disables blur entirely
     Theme = "Dark",
@@ -250,7 +250,7 @@ SaveManager:BuildConfigSection(Tabs.Settings)
 Window:SelectTab(1)
 
 Fluent:Notify({
-    Title = "Fluent",
+    Title = "CrimeHub",
     Content = "The script has been loaded.",
     Duration = 8
 })
