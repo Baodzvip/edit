@@ -2,9 +2,9 @@ local Main = require(game:GetService("ReplicatedStorage"):WaitForChild("Fluent")
 
 local Window = Main:CreateWindow({
     Title = "Fluent " .. Main.Version,
-    SubTitle = "by dawid",
+    SubTitle = "by baodzvip",
     TabWidth = 160,
-    Size = UDim2.fromOffset(580, 460),
+    Size = UDim2.fromOffset(500, 350),
     Acrylic = true,
     Theme = "Dark"
 })
