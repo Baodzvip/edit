@@ -200,7 +200,7 @@ do
 end
 
 Main:Notify({
-    Title = "Fluent",
+    Title = "Crime Hub",
     Content = "The script has been loaded.",
-    Duration = 8
+    Duration = 5
 })
