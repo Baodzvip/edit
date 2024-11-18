@@ -264,6 +264,14 @@ SaveManager:BuildConfigSection(Tabs.Settings)
 
 Window:SelectTab(1)
 
+Tabs.AutoFarm:AddParagraph({
+        Title = "Lemon Hub",
+        Content = "Best Farm"
+    })
+
+Window:SelectTab(2)
+
+
 Fluent:Notify({
     Title = "Lemon Hub",
     Content = "The script has been loaded.",
