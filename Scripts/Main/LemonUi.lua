@@ -247,7 +247,7 @@ end
 end)
 
 
-Weapon_Tab = AutoFarmTab:AddDropdown({
+Tabs.AutoFarm = Tabs.AutoFarm:AddDropdown({
 	Name = "Select Weapon",
 	Default = nil,
 	Options = Weaponlist,
@@ -256,7 +256,7 @@ Weapon_Tab = AutoFarmTab:AddDropdown({
 	end    
 })
 
-AutoFarmTab:AddButton({
+Tabs.AutoFarm:AddButton({
     Name = "Refresh Weapon",
     Callback = function()
     Wapon = {}
@@ -275,7 +275,7 @@ end
 })
 
 
-AutoFarmTab:AddToggle({
+Tabs.AutoFarm:AddToggle({
 	Name = "AutoEquiped",
 	Default = nil,
 	Callback = function(Value)
