@@ -143,7 +143,7 @@ do
 
 
     local Weaponlist = {}
-local Weapon = nil
+    local Weapon = nil
 
 for i,v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
     table.insert(Weaponlist,v.Name)
@@ -160,7 +160,7 @@ game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players")
         end)
 
 
- Tabs.main = Tabs.main:AddDropdown({
+ Tabs.Main = Tabs.Main:AddDropdown({
 	Title = "Select Weapon",
 	Default = nil,
 	Options = Weaponlist,
@@ -169,7 +169,7 @@ game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players")
 	end    
 })
 
-    Tabs.main:AddButton({
+    Tabs.Main:AddButton({
     Title = "Refresh Weapon",
     Callback = function()
     Wapon = {}
@@ -188,7 +188,7 @@ end
 })
 
 
-Tabs.main:AddToggle({
+Tabs.Main:AddToggle({
 	title = "AutoEquiped",
 	Default = nil,
 	Callback = function(Value)
