@@ -104,13 +104,13 @@ do
 
 
     local Dropdown = Tabs.Main:AddDropdown("Dropdown", {
-        Title = "Dropdown",
-        Values = {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen"},
+        Title = "Test",
+        Values = {"one", "two", "three"},
         Multi = false,
         Default = 1,
     })
 
-    Dropdown:SetValue("four")
+    Dropdown:SetValue("one")
 
     Dropdown:OnChanged(function(Value)
         print("Dropdown changed:", Value)
@@ -121,15 +121,15 @@ do
     local MultiDropdown = Tabs.Main:AddDropdown("MultiDropdown", {
         Title = "Dropdown",
         Description = "You can select multiple values.",
-        Values = {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen"},
+        Values = {"one", "two", "three"},
         Multi = true,
-        Default = {"seven", "twelve"},
+        Default = {""},
     })
 
     MultiDropdown:SetValue({
-        three = true,
-        five = true,
-        seven = false
+        one = false,
+        two = false,
+        three = false
     })
 
     MultiDropdown:OnChanged(function(Value)
