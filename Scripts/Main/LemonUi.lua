@@ -15,7 +15,7 @@ local Window = Fluent:CreateWindow({
 --Fluent provides Lucide Icons https://lucide.dev/icons/ for the tabs, icons are optional
 local Tabs = {
     Main = Window:AddTab({ Title = "Main", Icon = "airplay" }),
-    Farm = Window:AddTab({ Title = "Farm", Icon = "citrus" }),
+    AutoFarm = Window:AddTab({ Title = "Farm", Icon = "citrus" }),
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
 }
 
@@ -227,7 +227,63 @@ InterfaceManager:BuildInterfaceSection(Tabs.Settings)
 SaveManager:BuildConfigSection(Tabs.Settings)
 
 
-Window:SelectTab(1)
+Window:SelectTab(1) 
+
+local Weaponlist = {}
+local Weapon = nil
+
+for i,v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+    table.insert(Weaponlist,v.Name)
+end
+
+spawn(function()
+while wait() do
+if AutoEquiped then
+pcall(function()
+game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild(Weapon))
+end)
+end
+end
+end)
+
+
+Weapon_Tab = AutoFarmTab:AddDropdown({
+	Name = "Select Weapon",
+	Default = nil,
+	Options = Weaponlist,
+	Callback = function(Value)
+		Weapon = Value
+	end    
+})
+
+AutoFarmTab:AddButton({
+    Name = "Refresh Weapon",
+    Callback = function()
+    Wapon = {}
+        for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do  
+    if v:IsA("Tool") then
+       table.insert(Wapon ,v.Name)
+    end
+end
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do  
+    if v:IsA("Tool") then
+       table.insert(Wapon, v.Name)
+    end
+end
+              Weapon_Tab:Refresh(Wapon,true)
+      end    
+})
+
+
+AutoFarmTab:AddToggle({
+	Name = "AutoEquiped",
+	Default = nil,
+	Callback = function(Value)
+		AutoEquiped = Value
+	end    
+})
+
+Window:SelectTab(2)
 
 Fluent:Notify({
     Title = "Lemon Hub",
