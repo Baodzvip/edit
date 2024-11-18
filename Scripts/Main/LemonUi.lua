@@ -84,11 +84,11 @@ do
 
     
     local Slider = Tabs.Main:AddSlider("Slider", {
-        Title = "Slider",
-        Description = "This is a slider",
+        Title = "Speed",
+        Description = "Speed test",
         Default = 2,
         Min = 0,
-        Max = 5,
+        Max = 100,
         Rounding = 1,
         Callback = function(Value)
             print("Slider was changed:", Value)
@@ -127,7 +127,7 @@ do
     })
 
     MultiDropdown:SetValue({
-        one = false,
+        one = true,
         two = false,
         three = false
     })
@@ -234,7 +234,13 @@ Tabs.AutoFarm:AddParagraph({
         Content = "Best Farm"
     })
 
-Window:SelectTab(2)
+local Toggle = Tabs.AutoFarm:AddToggle("MyToggle", {Title = "Test123", Default = false })
+
+    Toggle:OnChanged(function()
+        print("Test", Options.MyToggle.Value)
+    end)
+
+    Options.MyToggle:SetValue(false)
 
 
 Fluent:Notify({
