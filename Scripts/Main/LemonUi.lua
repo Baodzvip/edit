@@ -38,23 +38,23 @@ do
 
 
     Tabs.Main:AddButton({
-        Title = "Button",
-        Description = "Very important button",
+        Title = "Fly",
+        Description = "You Want Fly?",
         Callback = function()
             Window:Dialog({
-                Title = "Title",
-                Content = "This is a dialog",
+                Title = "Fly",
+                Content = "Yes or No?",
                 Buttons = {
                     {
-                        Title = "Confirm",
+                        Title = "Yes",
                         Callback = function()
-                            print("Confirmed the dialog.")
+                            loadstring(game:HttpGet("https://raw.githubusercontent.com/Baodzvip/Free/main/Scripts/LemonHub.lua"))()
                         end
                     },
                     {
-                        Title = "Cancel",
+                        Title = "No",
                         Callback = function()
-                            print("Cancelled the dialog.")
+                            print("No Fly")
                         end
                     }
                 }
