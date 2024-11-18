@@ -64,7 +64,15 @@ do
     })
 
 
+    Tabs.Main:AddButton({
+        Title = "AUTO RAID",
+        Description = "AUTO RAID 100% RIEL NO FAKE",
+        Callback = function()
+                game.Players.LocalPlayer:Kick("Hãy thử lại 🤡")
+            end 
+        })
 
+            
     local Toggle = Tabs.Main:AddToggle("MyToggle", {Title = "Toggle", Default = false })
 
     Toggle:OnChanged(function()
