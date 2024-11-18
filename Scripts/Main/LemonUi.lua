@@ -31,8 +31,8 @@ do
 
 
     Tabs.Main:AddParagraph({
-        Title = "Paragraph",
-        Content = "This is a paragraph.\nSecond line!"
+        Title = "Lemon Hub",
+        Content = "Best Script"
     })
 
 
