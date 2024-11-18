@@ -227,8 +227,6 @@ InterfaceManager:BuildInterfaceSection(Tabs.Settings)
 SaveManager:BuildConfigSection(Tabs.Settings)
 
 
-Window:SelectTab(1) 
-
 local Weaponlist = {}
 local Weapon = nil
 
@@ -270,7 +268,7 @@ for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
        table.insert(Wapon, v.Name)
     end
 end
-              Weapon_Tab:Refresh(Wapon,true)
+              Tabs.AutoFarm:Refresh(Wapon,true)
       end    
 })
 
@@ -283,7 +281,7 @@ Tabs.AutoFarm:AddToggle({
 	end    
 })
 
-Window:SelectTab(2)
+Window:SelectTab(1)
 
 Fluent:Notify({
     Title = "Lemon Hub",
