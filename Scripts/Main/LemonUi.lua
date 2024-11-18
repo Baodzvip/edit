@@ -213,7 +213,7 @@ SaveManager:SetIgnoreIndexes({})
 -- a script hub could have themes in a global folder
 -- and game configs in a separate folder per game
 InterfaceManager:SetFolder("LemonHub")
-SaveManager:SetFolder("LemonHub/Game")
+SaveManager:SetFolder("LemonHub/Games")
 
 InterfaceManager:BuildInterfaceSection(Tabs.Settings)
 SaveManager:BuildConfigSection(Tabs.Settings)
