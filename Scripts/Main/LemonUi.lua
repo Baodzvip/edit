@@ -226,61 +226,6 @@ SaveManager:SetFolder("LemonHub/Games")
 InterfaceManager:BuildInterfaceSection(Tabs.Settings)
 SaveManager:BuildConfigSection(Tabs.Settings)
 
-
-local Weaponlist = {}
-local Weapon = nil
-
-for i,v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
-    table.insert(Weaponlist,v.Name)
-end
-
-spawn(function()
-while wait() do
-if AutoEquiped then
-pcall(function()
-game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild(Weapon))
-end)
-end
-end
-end)
-
-
-Tabs.AutoFarm = Tabs.AutoFarm:AddDropdown({
-	Name = "Select Weapon",
-	Default = nil,
-	Options = Weaponlist,
-	Callback = function(Value)
-		Weapon = Value
-	end    
-})
-
-Tabs.AutoFarm:AddButton({
-    Name = "Refresh Weapon",
-    Callback = function()
-    Wapon = {}
-        for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do  
-    if v:IsA("Tool") then
-       table.insert(Wapon ,v.Name)
-    end
-end
-for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do  
-    if v:IsA("Tool") then
-       table.insert(Wapon, v.Name)
-    end
-end
-              Tabs.AutoFarm:Refresh(Wapon,true)
-      end    
-})
-
-
-Tabs.AutoFarm:AddToggle({
-	Name = "AutoEquiped",
-	Default = nil,
-	Callback = function(Value)
-		AutoEquiped = Value
-	end    
-})
-
 Window:SelectTab(1)
 
 Fluent:Notify({
