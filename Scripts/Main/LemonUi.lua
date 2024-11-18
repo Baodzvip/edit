@@ -263,7 +263,7 @@ end
 end)
 
 
-Tabs.SelectWeapon = Tabs.SelectWeapon:AddDropdown({
+Tabs.Select Weapon = Tabs.SelectWeapon:AddDropdown({
 	Title = "Select Weapon",
 	Default = nil,
 	Options = Weaponlist,
@@ -286,7 +286,7 @@ for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
        table.insert(Wapon, v.Name)
     end
 end
-              SelectWeapon:Refresh(Wapon,true)
+              Tabs.Select Weapon:Refresh(Wapon,true)
       end    
 })
 
