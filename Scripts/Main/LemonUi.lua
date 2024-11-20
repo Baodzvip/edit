@@ -249,8 +249,7 @@ local Toggle = Tabs.AutoFarm:AddToggle("MyToggle", {Title = "Test123", Default =
 local Weaponlist = {}
 local Weapon = nil
 
-for i,v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
-    table.insert(Weaponlist,v.Name)
+
 end
 
 spawn(function()
@@ -301,7 +300,19 @@ Tabs.SelectWeapon:AddToggle({
 })
 
 
+local Dropdown = Tabs.SelectWeapon:AddDropdown("Dropdown", {
+        Title = "Select Weapon",
+        Values = {},
+        Multi = false,
+        Default = 1,
+    })
 
+    Dropdown:SetValue("")
+
+    Dropdown:OnChanged(function(Value)
+        for i,v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+    table.insert(Weaponlist,v.Name)
+    end)
 
 
 
