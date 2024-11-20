@@ -246,11 +246,7 @@ local Toggle = Tabs.AutoFarm:AddToggle("MyToggle", {Title = "Test123", Default =
 
 
 
-local Weaponlist = {}
-local Weapon = nil
 
-
-end
 
 spawn(function()
 while wait() do
@@ -299,12 +295,14 @@ Tabs.SelectWeapon:AddToggle({
 	end    
 })
 
+local Weaponlist = {}
+local Weapon = nil
 
 local Dropdown = Tabs.SelectWeapon:AddDropdown("Dropdown", {
         Title = "Select Weapon",
-        Values = {},
+        Values = {""},
         Multi = false,
-        Default = 1,
+        Default = nil,
     })
 
     Dropdown:SetValue("")
@@ -313,8 +311,6 @@ local Dropdown = Tabs.SelectWeapon:AddDropdown("Dropdown", {
         for i,v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
     table.insert(Weaponlist,v.Name)
     end)
-
-
 
 
 Fluent:Notify({
