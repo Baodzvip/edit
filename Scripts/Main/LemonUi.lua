@@ -17,7 +17,6 @@ local Tabs = {
     Main = Window:AddTab({ Title = "Main", Icon = "airplay" }),
     AutoFarm = Window:AddTab({ Title = "Farm", Icon = "citrus" }),
     SelectWeapon = Window:AddTab({ Title = "Select Weapon", Icon = "citrus" }),
-    Sever = Window:AddTab({ Title = "SeverGames", Icon = "citrus" }),
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
 }
 
