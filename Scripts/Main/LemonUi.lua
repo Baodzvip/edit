@@ -75,9 +75,8 @@ do
 
             
     local Toggle = Tabs.Main:AddToggle("MyToggle", {Title = "KillAura", Default = false })
-    Toggle.OnChanged:Connect(function()
-    getgenv().KillAURA = true
-    while getgenv().KillAURA do
+    Toggle.OnChanged:(function()
+    while wait() do
     task.wait()
        sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", 200)
           sethiddenproperty(game.Players.LocalPlayer, "MaxSimulationRadius", 200)
