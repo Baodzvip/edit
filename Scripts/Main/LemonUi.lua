@@ -88,8 +88,7 @@ spawn(function()
           end
        end
     end
-end)  
-        end
+end)
             end)
     Options.MyToggle:SetValue(false)
 
