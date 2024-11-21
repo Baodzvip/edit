@@ -248,7 +248,6 @@ local Toggle = Tabs.AutoFarm:AddToggle("MyToggle", {Title = "KillAura", Default 
                     end
                 end
             end)
-        end
     Options.MyToggle:SetValue(false)
 
 
