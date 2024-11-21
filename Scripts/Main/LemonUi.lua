@@ -75,10 +75,10 @@ do
 
             
     local Toggle = Tabs.Main:AddToggle("MyToggle", {Title = "KillAura", Default = false })
-    Toggle.OnChanged:(function(value)
+    Toggle.OnChanged:(function()
     loadstring(game:httpGet("https://raw.githubusercontent.com/Baodzvip/Free/refs/heads/main/Scripts/LemonKillaura.lua"))()
-            end)
-    Options.MyToggle:SetValue(false)
+    Options.MyToggle:SetValue(true)
+        end)
 
 
     
