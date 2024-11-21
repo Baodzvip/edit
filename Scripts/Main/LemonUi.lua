@@ -73,13 +73,13 @@ do
             end 
         })
 
-            
-    local Toggle = Tabs.Main:AddToggle("MyToggle", {Title = "KillAura", Default = false })
-    Toggle.OnChanged:(function()
-    loadstring(game:httpGet("https://raw.githubusercontent.com/Baodzvip/Free/refs/heads/main/Scripts/LemonKillaura.lua"))()
-            Options.MyToggle:SetValue()
-
-
+    local Toggle = Tabs.Main:AddToggle("Toggle", {Title = "KillAura", Default = false })
+    
+    Toggle:OnChanged(function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/Baodzvip/Free/refs/heads/main/Scripts/LemonKillaura.lua"))()
+        end)
+    Options.MyToggle:SetValue(false)
+    
     
     local Slider = Tabs.Main:AddSlider("Slider", {
         Title = "Speed",
