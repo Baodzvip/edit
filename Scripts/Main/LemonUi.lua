@@ -69,7 +69,7 @@ do
         Title = "AUTO RAID",
         Description = "AUTO RAID 100% RIEL NO FAKE",
         Callback = function()
-                game.Players.LocalPlayer:Kick("Hãy thử lại 🤡")
+                game.Players.LocalPlayer:Kick("Wait Update!!!")
             end 
         })
 
