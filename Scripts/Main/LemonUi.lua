@@ -75,7 +75,7 @@ do
 
             
     local Toggle = Tabs.Main:AddToggle("MyToggle", {Title = "KillAura", Default = false })
-    Toggle.OnChanged:({function()
+    Toggle.OnChanged:(function()
     getgenv().KillAURA = true
 spawn(function()
   while getgenv().KillAURA do
@@ -88,8 +88,9 @@ spawn(function()
           end
        end
     end
-end)        
-            end})
+end)  
+        end
+            end)
     Options.MyToggle:SetValue(false)
 
 
