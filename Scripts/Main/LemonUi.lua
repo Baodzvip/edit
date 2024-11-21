@@ -236,81 +236,21 @@ Tabs.AutoFarm:AddParagraph({
         Content = "Best Farm"
     })
 
-local Toggle = Tabs.AutoFarm:AddToggle("MyToggle", {Title = "Test123", Default = false })
+local Toggle = Tabs.AutoFarm:AddToggle("MyToggle", {Title = "KillAura", Default = false })
 
     Toggle:OnChanged(function()
-        print("Test", Options.MyToggle.Value)
-    end)
-
+        _G.KillAura = true
+        while KillAura do wait()
+            pcall(function()
+                for i,v in pairs(game:GetService("Workspace").Enemies:GetDescendants()) do
+                    if v.ClassName == "Model" and v.Humanoid.Health > 0 then
+                        v.Humanoid.Health = Die
+                        sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius",  200)
+                    end
+                end
+            end)
+        end
     Options.MyToggle:SetValue(false)
-
-
-
-
-
-spawn(function()
-while wait() do
-if AutoEquiped then
-pcall(function()
-game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild(Weapon))
-end)
-end
-end
-end)
-
-
-Tabs.SelectWeapon = Tabs.SelectWeapon:AddDropdown({
-	Title = "Select Weapon",
-	Default = nil,
-	Options = Weaponlist,
-	Callback = function(Value)
-		Weapon = Value
-	end    
-})
-
-Tabs.SelectWeapon:AddButton({
-    Title = "Refresh Weapon",
-    Callback = function()
-    Wapon = {}
-        for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do  
-    if v:IsA("Tool") then
-       table.insert(Wapon ,v.Name)
-    end
-end
-for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do  
-    if v:IsA("Tool") then
-       table.insert(Wapon, v.Name)
-    end
-end
-              Tabs.SelectWeapon:Refresh(Wapon,true)
-      end    
-})
-
-
-Tabs.SelectWeapon:AddToggle({
-	Title = "AutoEquiped",
-	Default = nil,
-	Callback = function(Value)
-		AutoEquiped = Value
-	end    
-})
-
-local Weaponlist = {}
-local Weapon = nil
-
-local Dropdown = Tabs.SelectWeapon:AddDropdown("Dropdown", {
-        Title = "Select Weapon",
-        Values = {""},
-        Multi = false,
-        Default = nil,
-    })
-
-    Dropdown:SetValue("")
-
-    Dropdown:OnChanged(function(Value)
-        for i,v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
-    table.insert(Weaponlist,v.Name)
-    end)
 
 
 Fluent:Notify({
