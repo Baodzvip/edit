@@ -75,10 +75,37 @@ do
 
     local Toggle = Tabs.Main:AddToggle("Toggle", {Title = "KillAura", Default = false })
     
-    Toggle:OnChanged(function()
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/Baodzvip/Free/refs/heads/main/Scripts/LemonKillaura.lua"))()
-        end)
-    Options.MyToggle:SetValue(false)
+    toggleButton.Changed:Connect(function()
+        getgenv().KillAURA = true
+        spawn(function()
+  while getgenv().KillAURA do
+    task.wait()
+       sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", 50)
+          sethiddenproperty(game.Players.LocalPlayer, "MaxSimulationRadius", 50)
+              for _, v in pairs(game:GetService("Workspace"):GetDescendants()) do
+                if v.ClassName == 'Humanoid' and v.Parent.Name ~= game.Players.LocalPlayer.Name then
+             v.Health = 0
+          end
+       end
+    end
+end)
+    else
+        getgenv().KillAURA = false
+        spawn(function()
+  while getgenv().KillAURA do
+    task.wait()
+       sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", 50)
+          sethiddenproperty(game.Players.LocalPlayer, "MaxSimulationRadius", 50)
+              for _, v in pairs(game:GetService("Workspace"):GetDescendants()) do
+                if v.ClassName == 'Humanoid' and v.Parent.Name ~= game.Players.LocalPlayer.Name then
+             v.Health = 0
+          end
+       end
+    end
+end)
+    end
+end)
+
     
     
     local Slider = Tabs.Main:AddSlider("Slider", {
