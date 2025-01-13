@@ -73,9 +73,9 @@ do
             end 
         })
 
-    local Toggle = Tabs.Main:AddToggle("Toggle", {Title = "KillAura", Default = false })
+    local Toggle = Tabs.Main:AddToggle("Toggle", {Title = "Dupe Op", Default = false })
     toggleButton.Changed:Connect(function()
-         game.Players.LocalPlayer:Kick("Update!")
+         game.Players.LocalPlayer:Kick("ĐÃ DUPE THÀNH CÔNG!")
 end)
 
     
