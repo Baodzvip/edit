@@ -66,44 +66,16 @@ do
 
 
     Tabs.Main:AddButton({
-        Title = "AUTO RAID",
-        Description = "AUTO RAID 100% RIEL NO FAKE",
+        Title = "Click",
+        Description = "Click Sẽ Có Bất Ngờ!",
         Callback = function()
-                game.Players.LocalPlayer:Kick("Wait Update!!!")
+                game.Players.LocalPlayer:Kick("THẰNG NGU BỊ DỤ LÊU LÊU")
             end 
         })
 
     local Toggle = Tabs.Main:AddToggle("Toggle", {Title = "KillAura", Default = false })
-    
     toggleButton.Changed:Connect(function()
-        getgenv().KillAURA = true
-        spawn(function()
-  while getgenv().KillAURA do
-    task.wait()
-       sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", 50)
-          sethiddenproperty(game.Players.LocalPlayer, "MaxSimulationRadius", 50)
-              for _, v in pairs(game:GetService("Workspace"):GetDescendants()) do
-                if v.ClassName == 'Humanoid' and v.Parent.Name ~= game.Players.LocalPlayer.Name then
-             v.Health = 0
-          end
-       end
-    end
-end)
-    else
-        getgenv().KillAURA = false
-        spawn(function()
-  while getgenv().KillAURA do
-    task.wait()
-       sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", 50)
-          sethiddenproperty(game.Players.LocalPlayer, "MaxSimulationRadius", 50)
-              for _, v in pairs(game:GetService("Workspace"):GetDescendants()) do
-                if v.ClassName == 'Humanoid' and v.Parent.Name ~= game.Players.LocalPlayer.Name then
-             v.Health = 0
-          end
-       end
-    end
-end)
-    end
+         game.Players.LocalPlayer:Kick("Update!")
 end)
 
     
