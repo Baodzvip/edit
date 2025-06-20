@@ -73,9 +73,9 @@ do
             end 
         })
 
-    local Toggle = Tabs.Main:AddToggle("Toggle", {Title = "Dupe Op", Default = false })
+    local Toggle = Tabs.Main:AddToggle("Toggle", {Title = "Test", Default = false })
     toggleButton.Changed:Connect(function()
-         game.Players.LocalPlayer:Kick("ĐÃ DUPE THÀNH CÔNG!")
+         print("LoL")
 end)
 
     
